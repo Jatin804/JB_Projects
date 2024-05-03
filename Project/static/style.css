@@ -1,0 +1,12 @@
+body{
+    background-color: goldenrod;
+}
+
+h1{
+    background-color: lightblue;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0%;
+}
