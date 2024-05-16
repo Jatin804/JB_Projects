@@ -7,5 +7,10 @@ from App import views
 
 
 urlpatterns = [
-    path('', views.index, name="index") 
+    path('', views.index, name='Home'),
+    path('Services',views.Services, name='Services'),
+    path('Courses',views.Courses, name='Courses'),
+    path('Contact', views.Contact, name='Contact'),
+    path('About', views.About, name='About'),
+        
 ]
