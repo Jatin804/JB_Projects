@@ -1,7 +1,6 @@
 var menu =document.querySelector("#nav i")
 var cross =document.querySelector("#full i")
 
-
 var  tl =gsap.timeline()
 
 tl.to("#full",{
