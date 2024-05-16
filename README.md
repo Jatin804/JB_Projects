@@ -1,2 +1,3 @@
 # JB_Projects
-teamed up projects ..
+
+A basic structure of a page is ready ! ---- 16/5/2024
