@@ -6,30 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website | {% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href= "{% static 'style.css' %}">   <!-- will give location of style.css -->
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
 </head>
 <body>
     <div id="cursor"></div>
     <div id="main">
         <div id="nav">
-            <h2>
-                <a href="/">Nav.</a>
-            </h2>
+            <h2 class="logo">Ready co.</h2>
             <i class="ri-menu-3-fill"></i>
-            
+
         </div>
         <div id="full">
-            <a href="/">Home</a><br>
+            <a href="/">Home</a> <br>
+            <a href="Sign_Up">Sign Up</a><br>
+            <a href="Login">Login</a><br>
             <a href="Services">Services</a><br>
-            <a href="Courses">Courses</a><br>
-            <a href="Contact">Contact</a><br>
+            <!-- <a href="Loginout">Services</a><br> -->
             <a href="About">About</a> <br>
+            <a href="Review">Review</a><br>
             <i class="ri-close-line"></i>
-            
+
+        </div>
+        <div class="heading">
+            <h1>Nature</h1>
         </div>
         
     </div>
+  
+
 
     <!-- code inheritance from other files eg :- index, etc -->
 

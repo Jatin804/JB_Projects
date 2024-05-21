@@ -1,6 +1,7 @@
 var menu =document.querySelector("#nav i")
 var cross =document.querySelector("#full i")
 
+
 var  tl =gsap.timeline()
 
 tl.to("#full",{
@@ -25,19 +26,32 @@ cross.addEventListener("click",function(){
     tl.reverse()
 })
 
-var main =document.querySelector("#main")
+var body = document.querySelector("body")
 // var cursor =document.querySelector("#cursor")
 var imageDiv = document.querySelector("#full a")
 
-main.addEventListener("mousemove",function(dets){
+body.addEventListener("mousemove",function(dets){
     gsap.to("#cursor",{
         x:dets.x,
         y:dets.y,
         duration:0.6,
-        easing:"back.out",
+        // easing:"back.out",
        
     })
 })
+
+
+// wrapper.addEventListener("mousemove",function(dets){
+//     gsap.to("#cursor",{
+//         x:dets.x,
+//         y:dets.y,
+//         duration:0.6,
+//         easing:"back.out",
+       
+//     })
+// })
+
+    
 imageDiv.addEventListener("mouseenter",function(){
     // cursor.innerHTML ="view more"
     gsap.to("#cursor",{
