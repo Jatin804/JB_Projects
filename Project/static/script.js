@@ -27,7 +27,7 @@ cross.addEventListener("click",function(){
 })
 
 var body = document.querySelector("body")
-// var cursor =document.querySelector("#cursor")
+
 var imageDiv = document.querySelector("#full a")
 
 body.addEventListener("mousemove",function(dets){
@@ -35,25 +35,17 @@ body.addEventListener("mousemove",function(dets){
         x:dets.x,
         y:dets.y,
         duration:0.6,
-        // easing:"back.out",
+       
        
     })
 })
 
 
-// wrapper.addEventListener("mousemove",function(dets){
-//     gsap.to("#cursor",{
-//         x:dets.x,
-//         y:dets.y,
-//         duration:0.6,
-//         easing:"back.out",
-       
-//     })
-// })
+
 
     
 imageDiv.addEventListener("mouseenter",function(){
-    // cursor.innerHTML ="view more"
+    
     gsap.to("#cursor",{
         scale:3,
         backgroundColor:"#ffffff8a",
