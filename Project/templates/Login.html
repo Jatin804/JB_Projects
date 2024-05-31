@@ -4,6 +4,25 @@
 
 {% block body %}
 
-
+<div class="headers">
+    <h1>Login</h1>
+    <form action="">
+        <input type="text" placeholder="Username" name="name">
+        <br>
+        <br>
+        <input type="password" placeholder="password" name="password">
+        <div class="recover">
+            <a href="">Forgot password ?</a>
+        </div>
+    </form>
+    <div class="term">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" >I agree  to these <a href="">Term & Conditions</a></label>
+    </div>
+    <button type="submit">Login</button>
+    <div class="member">
+        Already a Register <a href=""> login there </a>
+    </div>
+</div>  
 
 {% endblock body %}
