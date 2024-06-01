@@ -1,29 +1,31 @@
-{% extends "base.html" %}
 
-{% block title %} Login {% endblock title %}
 
-{% block body %}
-
-<div class="headers">
-    <h1>Login</h1>
-    <form action="">
-
-        <input type="text" placeholder="Username" name="name">
-        <br>
-        <br>
-        <input type="password" placeholder="password" name="password">
-        <div class="recover">
-            <a href="">Forgot password ?</a>
-        </div>
-    </form>
-    <div class="term">
-        <input type="checkbox" id="checkbox">
-        <label for="checkbox" >I agree  to these <a href="">Term & Conditions</a></label>
-    </div>
-    <button type="submit">Login</button>
-    <div class="member">
-        Already a Register <a href=""> login there </a>
-    </div>
-</div>  
-
-{% endblock body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'login.css' %}"> 
+</head>
+<body>
+    <div class="lcontainer">
+        <form action="#">
+          <h2>Login</h2>
+          <div class="input-lcontainer">
+            <input type="text" placeholder="Email or phone number" name="email" required>
+          </div>
+          <div class="input-lcontainer">
+            <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p class="forgot-password">Forgot password?</p>
+          <div class="signup-lcontainer">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+          </div>
+        </form>
+      </div>
+      
+</body>
+</html>

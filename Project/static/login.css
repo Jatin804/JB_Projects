@@ -1,85 +1,73 @@
-
-
-
 /* --------------------------------------login page start--------------------------------------------------- */
 
-.headers{
-    width: 400px;
-    /* padding: 90px 1px; */
-    height: 450px;
-    margin: 110px  auto;
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .lcontainer {
+    max-width: 350px;
+    margin: 100px auto;
+    padding: 50px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form h2 {
     text-align: center;
-    
-}
-
-form input{
-    width: 85%;
-    outline: none;
-    border: 1px solid #fff;
-    padding: 15px 20px;
-    margin-bottom: 10px;
-    border-radius: 23px;
-    background-color: #5a1818;
-    font-size: 14px;
-    color: black;
-}
-h1{
-    font-size: 35px;
-    margin-bottom: 30px;
-    text-align: center;
+  }
+  
+  .input-lcontainer {
+    margin-bottom: 20px;
+  }
+  
+  .input-lcontainer input {
+    width: 100%;
     padding: 20px;
-    color: black;
-}
-button{
-    font-size: 17px;
-    margin-top: 10px;
-    padding: 13px 0;
+    border: 1px solid #ccc;
     border-radius: 20px;
-    outline: 0;
-    border: 0;
-    width: 70%;
+    font-size: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 20px;
+    background-color: #bd081c;
     color: #fff;
-    background: #385c68;
-}
-button:hover{
-    background: #20353b;
-}
-.term{
-    margin-top: 25px;
-}
-.term input{
-    height: 10px;
-    width: 10px;
-
-}
-.term label{
-    font-size: 16px;
-}
-.term a{
-    color: #385c68;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #8e0614;
+  }
+  
+  .forgot-password {
+    text-align: center;
+  }
+  
+  .signup-lcontainer {
+    text-align: center;
+  }
+  
+  .signup-lcontainer a {
+    color: #bd081c;
     text-decoration: none;
-}
-.member{
-    font-size: 17px;
-    margin-top: 20px;
-    color: gray;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .lcontainer {
+      max-width: 700px;
+    }
+  }
+  
 
-}
-.member a{
-    text-decoration: none;
-    color: #385c68;
-}
-.recover{
-    text-align: right;
-    font-size: 14px;
-    margin: 0 40px 10px 10px;
-
-}
-.recover a{
-    text-decoration: none;
-    color: gray;
-}
-
-/* --------------------------------------review or login page end--------------------------------------------------- */
+/* --------------------------------------review or login page end--------------------------------------------------- */
