@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Website | Login</title>
     {% load static %}
     <link rel="stylesheet" href= "{% static 'login.css' %}"> 
 </head>
 <body>
     <div class="lcontainer">
-        <form action="#">
+        <form action="/login" method="post">
           <h2>Login</h2>
           <div class="input-lcontainer">
             <input type="text" placeholder="Email or phone number" name="email" required>
@@ -20,9 +20,9 @@
             <input type="password" placeholder="Password" name="password" required>
           </div>
           <button type="submit" class="btn">Login</button>
-          <p class="forgot-password">Forgot password?</p>
           <div class="signup-lcontainer">
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <a href=""><p class="forgot-password">Forgot password?</p></a>
+            <p>Don't have an account? <a href="/Sign_up">Sign up</a></p>
           </div>
         </form>
       </div>
