@@ -1,3 +1,0 @@
-all css and javastrip files should be only present in " static " folder / this folder
-
-oki ! 

@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App.apps.AppConfig',
-    'Project',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +81,7 @@ DATABASES = {
         "NAME": "nature", # name of db
         "USER": "jatin",      # user = jatin@localhost , pass = jatin@2004
         "PASSWORD": "jatin@2004",
-        "HOST": "127.0.0.1",
+        "HOST": "localhost",
         "PORT": "3306",
     }
 }

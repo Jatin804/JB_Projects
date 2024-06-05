@@ -1,16 +1,13 @@
-# created by admin
-# to redirect according to link 
-
 from django.contrib import admin
 from django.urls import path
-from App import views
+from core import views
 
 
 urlpatterns = [
-    path('', views.index, name='Home'),
-    path('Login', views.Login, name='Login'),  
+    path('', views.index, name='index'),
+    path('Log_in', views.Log_in, name='Log_in'),  
     path('Sign_up', views.Sign_up, name='Sign_up'),
-    # path('Loginout', views.Loginout, name='Loginout'),    
+    path('Log_out', views.Log_out, name='Log_out'),    
     path('Services',views.Services, name='Services'),
     path('Review', views.Review, name='Review'),
     path('About', views.About, name='About'),
