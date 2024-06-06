@@ -17,14 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# super user = Jatin | jatin@12345
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("core.urls")),
-    # path('log_in/', include("core.urls")),
-    # path('sign_up/', include("core.urls")),
-    # path('log_out/', include("core.urls")),
-    # path('services/', include("core.urls")),
-    # path('review/', include("core.urls")),
-    # path('about/', include("core.urls")),
 
 ]
