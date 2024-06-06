@@ -8,19 +8,24 @@ from django.contrib.auth.forms import AuthenticationForm
 
 def index(request):
     if request.user.is_anonymous:
-        return redirect("Log_in")
+        return redirect("log_in")
     return render(request, "index.html")
 
 
-def Log_in(request):
+def log_in(request):
     if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
 
-        if user is None:
-            login(request, user)
-            return render(request, 'index.html')
+            if user is not None:
+                login(request, user)
+                return redirect('/')  # Redirect to a named URL instead of rendering template directly
+            else:
+                login_error_message = "Invalid email or passwor"
+                return render(request, 'login.html', {'form': form, 'login_error': login_error_message})
         else:
             login_error_message = "Invalid email or password"
             return render(request, 'login.html', {'form': form, 'login_error': login_error_message})
@@ -30,28 +35,29 @@ def Log_in(request):
 
 
 
-def Sign_up(request):
+def sign_up(request):
     return render(request, "sign_up.html")
 
-def Log_out(request):
+def log_out(request):
+    logout()
     pass
 
 
-def Services(request):
+def services(request):
     if request.user.is_anonymous:
-        return redirect("Log_in")
+        return redirect("/log_in")
     else:
         return render(request, "services.html")
 
 
-def Review(request):
+def review(request):
     if request.user.is_anonymous:
-        return redirect("Log_in")
+        return redirect("/log_in")
     return render(request, "review.html")
 
 
-def About(request):
+def about(request):
     if request.user.is_anonymous:
-        return redirect("Log_in")
+        return redirect("/log_in")
     else:
         return render(request, "about.html")

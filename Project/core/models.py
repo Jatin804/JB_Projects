@@ -4,10 +4,13 @@ from django.db import models
 
 class Users(models.Model):
     username = models.CharField(max_length=225, unique=True, null=True)
-    password = models.CharField(max_length=125, primary_key=True, null=False)
-    review = models.CharField(max_length=1000, null=True)
+    password = models.CharField(max_length=125, null=False)
+    review = models.TextField(max_length=1000, null=True)
     # date = models.DateField(null=True)
 
+    def __str__(self):
+        return self.username
 
     class Meta:
-        db_table = "user"
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
