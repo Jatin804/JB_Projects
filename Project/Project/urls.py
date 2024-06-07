@@ -20,7 +20,6 @@ from django.urls import path, include
 # super user = Jatin | jatin@12345
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('', include("core.urls")),
-
 ]
