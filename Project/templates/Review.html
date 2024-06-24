@@ -1,86 +1,108 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'review.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clients Review UI </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
 
-{% block title %} Contact {% endblock title %}
+<body>
+    <!-- Main Container for Clients Review -->
+    <div class="rcontainer">
+        <h2> Our Happy Clients </h2>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, atque? Repudiandae
+            possimus asperiores hic nemo id a molestiae minus impedit!</p>
 
-{% block body %} 
+        <!-- Clients Review Section -->
+        <div class="reviewSection">
 
-<!-- <div class="re">
-    <h1>REVIEWS</h1>
-    <div class="borderr"></div>
-    </div> -->
+        <!-- Clients Review-1 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./client.png" alt="">
+                        <span>Raju Sheoran</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit beatae ipsa
+                        voluptatibus perferendis quos eaque nemo error tempora harum quas, laudantium tenetur, neque,
+                        facere exercitationem!</p>
+                    <p>Jan 01, 2023</p>
+                </article>
+            </div>
 
-<header>
-    
-    <div class="containers">
-    <div class="container-left">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Read what our customers love about us</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur  <br>
-            adipisicing elit. Alias, ut!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur  <br>
-                adipisicing elit. Alias, ut!</p>
-                <button>Read our success stories</button>
+        <!-- Clients Review-2 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./client.png" alt="">
+                        <span>Raju Sheoran</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit beatae ipsa
+                        voluptatibus perferendis quos eaque nemo error tempora harum quas, laudantium tenetur, neque,
+                        facere exercitationem!</p>
+                    <p>Jan 01, 2023</p>
+                </article>
+            </div>
+
+        <!-- Clients Review-3 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./client.png" alt="">
+                        <span>Raju Sheoran</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit beatae ipsa
+                        voluptatibus perferendis quos eaque nemo error tempora harum quas, laudantium tenetur, neque,
+                        facere exercitationem!</p>
+                    <p>Jan 01, 2023</p>
+                </article>
+            </div>
+        </div>
     </div>
-    <div class="container-right">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="cards">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="user">
-            <div class="card-content">
-                <span><i class="ri-double-quotes-l"></i></span>
-                <div class="card-details">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Iusto quidem rerum commodi ratione earum.</p>
-                    <h4> - Cristiano Ronaldo</h4>
-                </div>
+</body>
 
-            </div>
-        </div>
-        <div class="cards">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="user">
-            <div class="card-content">
-                <span><i class="ri-double-quotes-l"></i></span>
-                <div class="card-details">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Iusto quidem rerum commodi ratione earum.</p>
-                    <h4>  - Cristiano Ronaldo</h4>
-                </div>
-
-            </div>
-        </div>
-        <div class="cards">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="user">
-            <div class="card-content">
-                <span><i class="ri-double-quotes-l"></i></span>
-                <div class="card-details">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Iusto quidem rerum commodi ratione earum.</p>
-                    <h4> - Cristiano Ronaldo</h4>
-                </div>
-
-            </div>
-        </div>
-        {% comment %} <div class="cards">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="user">
-            <div class="card-content">
-                <span><i class="ri-double-quotes-l"></i></span>
-                <div class="card-details">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Iusto quidem rerum commodi ratione earum.</p>
-                    <h4>  - Cristiano Ronaldo</h4>
-                </div>
-
-            </div>
-        </div> {% endcomment %}
-    </div>
-</div>
-</header>
-
-
-
-<!-- code related to Contact page -->
-
-{% endblock body %}
+</html>
+</body>

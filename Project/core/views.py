@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.db import IntegrityError
+
 
 
 # Create your views here.
@@ -26,7 +28,7 @@ def log_in(request):
                     login(request, user)
                     return redirect('/')  # Redirect to a named URL instead of rendering template directly
                 else:
-                    login_error_message = "Invalid email or passwor"
+                    login_error_message = "Invalid User or password"
                     return render(request, 'login.html', {'form': form, 'login_error': login_error_message})
                 
             except Exception as err:
@@ -46,20 +48,18 @@ def sign_up(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             try:
-
                 user = form.save()
                 username = form.cleaned_data.get('username')
-                raw_password = form.cleaned_data.get('password1')
-                user = authenticate(username=username, password=raw_password)
+                password = form.cleaned_data.get('password1')  # Use 'password1' for UserCreationForm
+                user = authenticate(username=username, password=password)
                 login(request, user)
                 return redirect('/log_in')
-            
-            except Exception as err:
-                return render(request, 'sign_up', {'error' : 'User Already exists'})
-                
+            except IntegrityError:
+                return render(request, 'sign_up.html', {'error': 'User already exists'})
     else:
         form = UserCreationForm()
-    return render(request, "sign_up.html", {'form': form})
+    return render(request, 'sign_up.html', {'form': form})
+
 
 
 def log_out(request):
