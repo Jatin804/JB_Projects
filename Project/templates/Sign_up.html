@@ -1,78 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    {% load static %}
-    <link rel="stylesheet" href= "{% static 'Sign_up.css' %}"> 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+
+   <title>Website | Sign Up</title>
 </head>
 <body>
+   <div class="login">
+      <img src="{% static 'assets/img/login-bg.png' %}" alt="image" class="login__bg">
 
-<div class="container">
-    <div class="circle"></div>
-    <div class="circle1"></div>
-</div>
+      <form action="{% url 'sign_up' %}" method="post" class="login__form">
+         {% csrf_token %}
+         <h1 class="login__title">Sign Up</h1>
 
-<form action="{% url 'sign_up' %}" method="post">
-    {% csrf_token %}
-
-    <div class="cont">
-        <div class="design">
-            <div class="form-img">
-            <img src="https://images.pexels.com/photos/3073666/pexels-photo-3073666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" >
+         <div class="login__inputs">
+            <div class="login__box">
+               <input type="text" placeholder="Username" name="username" required class="login__input" value="{{ form.username.value|default:'' }}">
+               <i class="ri-user-fill"></i>
             </div>
-            <div class="login">
-                <div class="media-icons">
-                    <i class="ri-lock-2-line"></i>
-                </div>
-                <h3> WELCOME TO </h3>
-                <br>
-                <br>
-                <h1>NATURE</h1>
-                <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Laudantium!</p>
-                <input type="text" placeholder="Username" name="username" id="username">
-                <div class="mediaa-icons">
-                    <i class="ri-contacts-fill"></i>
-                </div>
-                <input type="password" placeholder="Password" id="password" name="password">
-                <button type="submit">sign up</button>
-                <span>Lorem ipsum dolor sit amet consectetur.</span>
-                <h5>Or</h5>
-                <h6>continue with social media</h6>
-                <div class="">
-                    <br>
-                <div class="icon">
-                    <i class="ri-facebook-line"></i >
-                </div>
-                <div class="icon">
-                    <i class="ri-twitter-line"></i >
-                </div>
-                <div class="icon">
-                    <i class="ri-mail-line"></i>
-                </div>
-                <div class="icon">
-                    <i class="ri-linkedin-fill"></i>
-                </div>
-                </div>
-                <p>{{error}}</p>
+             {% if form.username.errors %}
+                  <p class="error">{{ form.username.errors.0 }}</p>
+             {% endif %}
 
-            
+            <div class="login__box">
+               <input type="email" placeholder="Email" name="email" required class="login__input" value="{{ form.email.value|default:'' }}">
+               <i class="ri-mail-fill"></i>
             </div>
-            <div class="right-section">
-                <div class="sign">
-                <i class="ri-infinity-line"></i>
-                </div>
-                <h1>NATURE</h1>
-                <br>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Adipisci ratione laudantium  facere eius provident,  <br>consequuntur odit?</p>
+             {% if form.email.errors %}
+                 <p class="error">{{ form.email.errors.0 }}</p>
+             {% endif %}
+
+            <div class="login__box">
+               <input type="password" placeholder="Password" name="password1" required class="login__input">
+               <i class="ri-lock-2-fill"></i>
             </div>
-        </div>
-    </div>
-</form>
+             {% if form.password1.errors %}
+                 <p class="error">{{ form.password1.errors.0 }}</p>
+             {% endif %}
 
+            <div class="login__box">
+               <input type="password" placeholder="Confirm Password" name="password2" required class="login__input">
+               <i class="ri-lock-2-fill"></i>
+            </div>
+             {% if form.password2.errors %}
+                  <p class="error">{{ form.password2.errors.0 }}</p>
+             {% endif %}
+         </div>
 
+         <div class="login__check">
+            <div class="login__check-box">
+               <input type="checkbox" class="login__check-input" id="user-check" name="check" required>
+               <label for="user-check" class="login__check-label">Accept terms and conditions</label>
+            </div>
+             {% if form.check.errors %}
+                 <p class="error">{{ form.check.errors.0 }}</p>
+             {% endif %}
+         </div>
 
+         <button type="submit" class="login__button">Sign Up</button>
+         {% if error %}
+            <p class="error">{{ error }}</p>
+         {% endif %}
+
+      </form>
+   </div>
+</body>
+</html>

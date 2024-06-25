@@ -1,36 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Website | Services </title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href= "{% static 'services.css' %}"> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'services.css' %}">
+	<!-- Font Awesome CDN-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-<div class="service">
-    <h1>SERVICE</h1>
-</div>
-<div class="service-img">
-    <img src="https://images.pexels.com/photos/4963634/pexels-photo-4963634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-    <h1 class="travel">Enjoy your <br> Travel</h1>
-    <div class="box">
-        <div class="box1">
-            <h2>Lorem, ipsum <br> dolor.</h2>
-        </div>
-    </div>
-</div>
-<div class="service-content">
-    <div class="heading">
-        <h1>Blog about <br> travelling</h1>
-    </div>
-    <div class="content">
-        Lorem ipsum dolor, sit amet consectetur <br> adipisicing elit. Hic in quod a libero? <br>
-        Lorem ipsum dolor, sit amet consectetur <br> adipisicing elit. Hic in quod a libero? <br>
+	<!-- For font family Poppins -->
+	<link rel="preconnect"
+		href="https://fonts.googleapis.com">
+	<link rel="preconnect"
+		href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+		rel="stylesheet">
+	<title>Responsive Services Section</title>
+</head>
 
-        <div class="button">
-            <button class="btn">Read More</button>
-        </div>
-    </div>
-</div>
+<body>
+	<h1>Our Services</h1>
+	<div class="services-container">
+		<div class="service-card">
+			<div class="icon-container">
+				<i class="fa-solid fa-user"></i>
+			</div>
+			<h3>Service 1</h3>
+			<p>
+				With the idea of imparting programming
+				knowledge, Mr. Sandeep Jain, an IIT
+				Roorkee alumnus started a dream,
+				GeeksforGeeks. Whether programming
+				excites you or you feel stifled,
+				how to ace data structures and
+				algorithms, GeeksforGeeks is a
+				one-stop solution.</p>
+			<a href="#" class="button">Learn More</a>
+		</div>
+
+		<div class="service-card">
+			<div class="icon-container">
+				<i class="fa-solid fa-cart-shopping"></i>
+			</div>
+			<h3>Service 2</h3>
+			<p>
+				With the idea of imparting programming
+				knowledge, Mr. Sandeep Jain, an IIT
+				Roorkee alumnus started a dream,
+				GeeksforGeeks. Whether programming
+				excites you or you feel stifled,
+				how to ace data structures and
+				algorithms, GeeksforGeeks is a
+				one-stop solution.</p>
+			<a href="#" class="button">Learn More</a>
+		</div>
+
+		<div class="service-card">
+			<div class="icon-container">
+				<i class="fa-solid fa-toolbox"></i>
+			</div>
+			<h3>Service 3</h3>
+			<p>
+				With the idea of imparting programming
+				knowledge, Mr. Sandeep Jain, an IIT
+				Roorkee alumnus started a dream,
+				GeeksforGeeks. Whether programming
+				excites you or you feel stifled,
+				how to ace data structures and
+				algorithms, GeeksforGeeks is a
+				one-stop solution.</p>
+			<a href="#" class="button">Learn More</a>
+		</div>
+
+		<div class="service-card">
+			<div class="icon-container">
+				<i class="fa-brands fa-android"></i>
+			</div>
+			<h3>Service 4</h3>
+			<p>
+				With the idea of imparting programming
+				knowledge, Mr. Sandeep Jain, an IIT
+				Roorkee alumnus started a dream,
+				GeeksforGeeks. Whether programming
+				excites you or you feel stifled,
+				how to ace data structures and
+				algorithms, GeeksforGeeks is a
+				one-stop solution.</p>
+			<a href="#" class="button">Learn More</a>
+		</div>
+
+		<div class="service-card">
+			<div class="icon-container">
+				<i class="fa-solid fa-database"></i>
+			</div>
+			<h3>Service 5</h3>
+			<p>
+				With the idea of imparting programming
+				knowledge, Mr. Sandeep Jain, an IIT
+				Roorkee alumnus started a dream,
+				GeeksforGeeks. Whether programming
+				excites you or you feel stifled,
+				how to ace data structures and
+				algorithms, GeeksforGeeks is a
+				one-stop solution.</p>
+			<a href="#" class="button">Learn More</a>
+		</div>
+
+		<div class="service-card">
+			<div class="icon-container">
+				<i class="fa-solid fa-pen"></i>
+			</div>
+			<h3>Service 6</h3>
+			<p>
+				With the idea of imparting programming
+				knowledge, Mr. Sandeep Jain, an IIT
+				Roorkee alumnus started a dream,
+				GeeksforGeeks. Whether programming
+				excites you or you feel stifled,
+				how to ace data structures and
+				algorithms, GeeksforGeeks is a
+				one-stop solution.</p>
+			<a href="#" class="button">Learn More</a>
+		</div>
+	</div>
+</body>
+
+</html>

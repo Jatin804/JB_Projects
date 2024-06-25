@@ -3,8 +3,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.db import IntegrityError
+from .models import CustomUserCreationForm
 
-
+#check user = Jatin12, jatin2004@gmail.com, hello@12345
 
 # Create your views here.
 
@@ -45,19 +46,24 @@ def log_in(request):
 
 def sign_up(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             try:
                 user = form.save()
                 username = form.cleaned_data.get('username')
                 password = form.cleaned_data.get('password1')  # Use 'password1' for UserCreationForm
                 user = authenticate(username=username, password=password)
-                login(request, user)
-                return redirect('/log_in')
+                if user is not None:
+                    login(request, user)
+                    return redirect('/log_in')
+                else:
+                    return render(request, 'sign_up.html', {'form': form, 'error': 'Authentication failed'})
             except IntegrityError:
-                return render(request, 'sign_up.html', {'error': 'User already exists'})
+                return render(request, 'sign_up.html', {'form': form, 'error': 'User already exists'})
+        else:
+            return render(request, 'sign_up.html', {'form': form, 'error': 'Invalid form submission'})
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
     return render(request, 'sign_up.html', {'form': form})
 
 
