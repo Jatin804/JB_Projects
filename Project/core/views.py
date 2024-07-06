@@ -5,6 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.db import IntegrityError
 from .models import CustomUserCreationForm
 
+#admin = Jatin, jatin@12345
 #check user = Jatin12, jatin2004@gmail.com, hello@12345
 
 # Create your views here.
@@ -78,12 +79,6 @@ def services(request):
         return redirect("/log_in")
     else:
         return render(request, "services.html")
-
-
-def review(request):
-    if request.user.is_anonymous:
-        return redirect("/log_in")
-    return render(request, "review.html")
 
 
 def about(request):

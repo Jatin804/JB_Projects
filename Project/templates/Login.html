@@ -24,13 +24,19 @@
             <div class="login__inputs">
                <div class="login__box">
                   <input type="text" placeholder="Username" name="username" required class="login__input">
-                  <i class="ri-mail-fill"></i>
+                  <i class="ri-user-fill"></i>
                </div>
+                {% if form.username.errors %}
+                    <p class="error">{{ form.username.errors.0 }}</p>
+                {% endif %}
 
                <div class="login__box">
                   <input type="password" placeholder="Password" name="password" required class="login__input">
                   <i class="ri-lock-2-fill"></i>
                </div>
+                {% if form.password.errors %}
+                    <p class="error">{{ form.password1.errors.0 }}</p>
+                {% endif %}
             </div>
 
             <div class="login__check">
