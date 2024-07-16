@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1cdb2058-1354-4223-b16b-9d7dfe3812d8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Project/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/templates/Services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/templates/Services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/templates/Sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/templates/Sign_up.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Project/core/models.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project/core/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project/templates/base.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project/templates/services.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2iGeXJTwPOa8YhaowKV9H3zJ5p2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sir/Documents/Python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sir\Documents\Web_Dev\JB_Projects\Project\static\assets\img" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1cdb2058-1354-4223-b16b-9d7dfe3812d8" name="Changes" comment="" />
+      <created>1719121397625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719121397625</updated>
+      <workItem from="1719121398651" duration="458000" />
+      <workItem from="1719122180495" duration="750000" />
+      <workItem from="1719225840544" duration="1400000" />
+      <workItem from="1719245549474" duration="5957000" />
+      <workItem from="1719309753530" duration="4079000" />
+      <workItem from="1719318016086" duration="2092000" />
+      <workItem from="1719321677769" duration="104000" />
+      <workItem from="1719329135351" duration="1136000" />
+      <workItem from="1719539637874" duration="357000" />
+      <workItem from="1719665617896" duration="3179000" />
+      <workItem from="1719684131479" duration="340000" />
+      <workItem from="1719733990293" duration="516000" />
+      <workItem from="1719802240675" duration="813000" />
+      <workItem from="1719803083657" duration="224000" />
+      <workItem from="1720081501367" duration="21000" />
+      <workItem from="1720099195722" duration="75000" />
+      <workItem from="1720270556153" duration="6507000" />
+      <workItem from="1720318412124" duration="81000" />
+      <workItem from="1720457143975" duration="108000" />
+      <workItem from="1721125580184" duration="4439000" />
+      <workItem from="1721138430754" duration="4632000" />
+      <workItem from="1721143159405" duration="460000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
