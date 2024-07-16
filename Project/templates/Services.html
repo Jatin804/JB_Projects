@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
       rel="stylesheet"
     />
       {% load static %}
     <link rel="stylesheet" href="{% static 'services.css' %}" />
-    <title>Web Design Mastery | Rayal Park</title>
+    <title>Nature | Services</title>
   </head>
   <body>
     <header class="header">
@@ -26,7 +28,7 @@
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="btn nav__btn">Book Now</button>
+          <a href="booking"> <button class="btn nav__btn">Book Now</button> </a>
       </nav>
       <div class="section__container header__container" id="home">
         <p>Simple - Unique - Friendly</p>
@@ -35,33 +37,56 @@
     </header>
 
     <section class="section__container booking__container">
-      <form action="/" class="booking__form">
+      <form action="{% url 'services' %}" method="post" class="booking__form">
+          {% csrf_token %}
         <div class="input__group">
           <span><i class="ri-calendar-2-fill"></i></span>
           <div>
             <label for="check-in">CHECK-IN</label>
-            <input type="text" placeholder="Check In" />
+            <input type="date" placeholder="Check In" name="check_in"/>
           </div>
         </div>
         <div class="input__group">
           <span><i class="ri-calendar-2-fill"></i></span>
           <div>
             <label for="check-out">CHECK-OUT</label>
-            <input type="text" placeholder="Check Out" />
+            <input type="date" placeholder="Check Out" name="check_out"/>
           </div>
         </div>
         <div class="input__group">
           <span><i class="ri-user-fill"></i></span>
           <div>
-            <label for="guest">GUEST</label>
-            <input type="text" placeholder="Guest" />
+            <label for="location">LOCATION</label>
+            <input type="text" placeholder="location" name="location" />
           </div>
         </div>
         <div class="input__group input__btn">
-          <button class="btn">CHECH OUT</button>
+          <button type="submit" class="btn">CHECK OUT</button>
         </div>
       </form>
     </section>
+
+
+
+
+    {% if hotels %}
+    {% for hotel in hotels %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+        </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">{{ hotel.name }} - Available from {{ hotel.available_from }} to {{ hotel.available_to }}
+        </div>
+        </div>
+      </div>
+    {% endfor %}
+    {% endif %}
+
+
+
 
     <section class="section__container about__container" id="about">
       <div class="about__image">

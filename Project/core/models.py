@@ -23,4 +23,18 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2', 'check')
 
+class Hotel(models.Model):
+    name = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    available_from = models.DateField()
+    available_to = models.DateField()
+
+class Booking(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    hotel_name = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    date_form = models.DateField()
+    date_to = models.DateField()
+
 

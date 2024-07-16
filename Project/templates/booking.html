@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+   <title>Website | Booking</title>
+</head>
+<body>
+   <div class="login">
+      <img src="{% static 'assets/img/login-bg.png' %}" alt="image" class="login__bg">
+      <form action="{% url 'booking' %}" method="post" class="login__form">
+         {% csrf_token %}
+         <h1 class="login__title">Book a Hotel</h1>
+         <div class="login__inputs">
+            <div class="login__box">
+               <input type="text" placeholder="Name" name="user_name" required class="login__input">
+               <i class="ri-user-fill"></i>
+            </div>
+            <div class="login__box">
+               <input type="email" placeholder="Email" name="email" required class="login__input">
+               <i class="ri-mail-fill"></i>
+            </div>
+            <div class="login__box">
+               <input type="text" placeholder="Hotel Name" name="hotel_name" required class="login__input">
+               <i class="ri-hotel-line"></i>
+            </div>
+            <div class="login__box">
+               <input type="date" placeholder="Date From" name="date_from" required class="login__input">
+               <i class="ri-calendar-2-line"></i>
+            </div>
+            <div class="login__box">
+               <input type="date" placeholder="Date To" name="date_to" required class="login__input">
+               <i class="ri-calendar-2-line"></i>
+            </div>
+         </div>
+         <button type="submit" class="login__button">Book Now - 2000/ Night</button>
+      </form>
+   </div>
+</body>
+</html>
